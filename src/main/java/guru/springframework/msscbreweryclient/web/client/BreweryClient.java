@@ -16,7 +16,7 @@ import java.util.UUID;
 public class BreweryClient {
 
     public final String BEER_PATH_V1 = "/api/v1/beer/";
-    private String apihost;
+    private String apihost; //set this dynamically, makes more sense in real -> application.properties
 
     private final RestTemplate restTemplate;
 
