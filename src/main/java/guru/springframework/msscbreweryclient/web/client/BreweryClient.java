@@ -33,6 +33,12 @@ public class BreweryClient {
         return restTemplate.postForLocation(apihost + BEER_PATH_V1, beerDto);
     }
 
+    /**
+     * idempotent method
+     * use a simple put of the restTemplate
+     * @param uuid
+     * @param beerDto
+     */
     public void updateBeer(UUID uuid, BeerDto beerDto){
         restTemplate.put(apihost + BEER_PATH_V1 + "/" + uuid.toString(), beerDto);
     }
