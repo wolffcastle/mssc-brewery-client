@@ -47,6 +47,11 @@ public class BreweryClient {
         this.apihost = apihost;
     }
 
+    /**
+     * CRUD operations for Customer actions
+     * @param customerId
+     * @return
+     */
     public CustomerDto getCustomerById(UUID customerId) {
         return restTemplate.getForObject(apihost+ CUSTOMER_PATH_V1 + customerId.toString(), CustomerDto.class);
     }
